@@ -31,12 +31,22 @@ public class InstallPluginActiveTest {
         searchWpDark.sendKeys("WP Dark Mode");
 
         // Locate and click the link to the specific plugin page from the search results
-        WebElement pluginLink = driver.findElement(By.partialLinkText("https://iftekher.s3-tastewp.com/wp-admin/plugin-install.php?tab=plugin-information&plugin=wp-dark-mode&TB_iframe=true&width=357&height=612")); // Replace with the actual link text
-        pluginLink.click();
+        //WebElement pluginLink = driver.findElement(By.partialLinkText("https://iftekher.s3-tastewp.com/wp-admin/plugin-install.php?tab=plugin-information&plugin=wp-dark-mode&TB_iframe=true&width=357&height=612"));
+       // pluginLink.click();
 
-        //Install the Wp Dark mood
-        WebElement installDarkMood = driver.findElement(By.xpath("//a[@class='install-now button']"));
-        installDarkMood.click();
+        // Locate the "Install Now" button using the data-slug attribute
+        //WebElement installButton = driver.findElement(By.cssSelector("[data-slug='dark-mode-toggle']"));
+
+        // Click the "Install Now" button
+        //installButton.click();
+
+        driver.get("https://iftekher.s3-tastewp.com/wp-admin/plugin-install.php?tab=plugin-information&plugin=wp-dark-mode&TB_iframe=true&width=772&height=572");
+        WebElement installLink = driver.findElement(By.linkText("Install Now"));
+        installLink.click();
+
+        driver.get("https://iftekher.s3-tastewp.com/wp-admin/plugins.php");
+        WebElement activateLink = driver.findElement(By.id("activate-wp-dark-mode"));
+        activateLink.click();
 
         Thread.sleep(5000);
         //close browser
