@@ -24,6 +24,6 @@ public class DriverSetup {
     //No return(Void) && this method execute last using AfterSuite
     @AfterSuite
     public void closeDriver(){
-        driver.close();
+        driver.quit();
     }
 }
