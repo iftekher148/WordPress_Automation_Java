@@ -13,7 +13,7 @@ public class MyFirstWebTestCase {
         // browser google homepage https://www.google.com/
         driver.get("https://www.google.com");
 
-        //obser home page
+        //Observe home page
         Thread.sleep(5000);
 
         //close browser

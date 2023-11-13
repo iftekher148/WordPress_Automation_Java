@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class NopCommerce extends DriverSetup {
+public class AdvancedLocatorNopCommerce extends DriverSetup {
         @Test
         public void TestLoadNopCommerceSite() throws InterruptedException {
             // Open browser

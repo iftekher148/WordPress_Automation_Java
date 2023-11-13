@@ -20,7 +20,6 @@ public class InteractingWebElement extends DriverSetup {
         System.out.println(tagName);
         System.out.println(attributeName);
 
-
         textBox.sendKeys("Hello World");
         Thread.sleep(2000);
         textBox.clear();
@@ -28,7 +27,7 @@ public class InteractingWebElement extends DriverSetup {
 
         System.out.println(textBox.isDisplayed());
 
-
+        // Option Check
         WebElement checkOption = driver.findElement(By.xpath("//input[@id='checkBoxOption1']"));
         System.out.println(checkOption.isSelected());
         checkOption.click();

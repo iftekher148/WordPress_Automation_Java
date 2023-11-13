@@ -15,7 +15,7 @@ public class GetNavigate extends DriverSetup {
         Thread.sleep(3000);
         driver.navigate().to("https://www.facebook.com/");
         Thread.sleep(3000);
-        driver.navigate().back(); //
+        driver.navigate().back(); // click back arrow
         Thread.sleep(3000);
         driver.navigate().forward();
         Thread.sleep(3000);
@@ -37,12 +37,12 @@ public class GetNavigate extends DriverSetup {
     @Test
     public void testWindow() throws InterruptedException {
         driver.navigate().to("https://rahulshettyacademy.com/AutomationPractice/");
-        driver.findElement(By.xpath("//button[@id='openwindow']")).click();
+        driver.findElement(By.xpath("//button[@id='openwindow']")).click(); //New Window
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//a[@id='opentab']")).click();
+        driver.findElement(By.xpath("//a[@id='opentab']")).click(); //New Tab
         Thread.sleep(3000);
         System.out.println(driver.getCurrentUrl());  // Find current working URL
-        System.out.println(driver.getWindowHandle()); //find current identification number
+        System.out.println(driver.getWindowHandle()); //find current identification number, called window hamdeler
 
         List <String> windowList = new ArrayList<>(driver.getWindowHandles()); //Get list of number tab identification
         System.out.println(windowList.get(1));
