@@ -63,4 +63,16 @@ public class GetNavigate extends DriverSetup {
 
         Thread.sleep(3000);
     }
+
+    @Test
+    public void testNewWindow() throws InterruptedException {
+        //Working With new Window
+        driver.navigate().to("https://rahulshettyacademy.com/AutomationPractice/");
+        driver.findElement(By.xpath("//button[@id='openwindow']")).click(); //New Window
+        Thread.sleep(3000);
+        List<String> windowHandlers = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(windowHandlers.get(1));
+        driver.findElement(By.xpath("//li[@class='nav-item']//a[normalize-space()='Courses']")).click();
+        Thread.sleep(3000);
+    }
 }
